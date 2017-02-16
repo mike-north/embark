@@ -1,0 +1,22 @@
+@import "bootstrap/bootstrap";
+body{
+	font-family: "Helvetica Neue", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+}
+
+
+@import "bootstrap/_mixins.scss";
+@import "bootstrap/_variables.scss";
+
+@import "_embark-mixins.scss";
+@import "_embark-variables.scss";
+@import "_embark-variables-md.scss";
+
+@import "embark-bootstrap-extensions";
+@import "embark-ui";
+@import "embark-utils";
+@import "embark-md";
+// @import "embark-theme/accent";
+
+nav ul.nav{
+	display: block;
+}
