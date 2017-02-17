@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('chat');
+  this.route('mail');
+  this.route('dashboard');
 });
 
 export default Router;

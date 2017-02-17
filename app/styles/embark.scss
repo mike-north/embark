@@ -15,8 +15,32 @@ body{
 @import "embark-ui";
 @import "embark-utils";
 @import "embark-md";
-// @import "embark-theme/accent";
+@import "embark-theme/primary";
 
-nav ul.nav{
+.nav{
+	display: block;
+}
+
+.navbar,
+.navbar-nav {
+	display: block;
+  .nav-item + .nav-item {
+    margin-left: 1rem;
+  }
+}
+
+.navbar-nav .nav-item {
+	display: inline-block;
+}
+.nav-link {
+	padding: 0;
+	border: inherit;
+	display: inline-block;
+	position: relative;
+}
+.img-circle {
+	border-radius: 50%;
+}
+.block {
 	display: block;
 }

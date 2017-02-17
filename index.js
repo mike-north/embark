@@ -24,7 +24,14 @@ module.exports = {
   //   return stew.mv(bootstrapAssetPath('fonts'), 'fonts');
   // },
   treeForVendor: function(tree) {
-    return stew.debug(new Merge([tree, stew.mv(bootstrapAssetPath('js/dist'), 'bootstrap')]), { name: 'vennndor'});
+    return stew.debug(
+      new Merge([
+        tree,
+        stew.mv(path.join(path.dirname(require.resolve('jquery-sparkline'))), 'jquery-sparkline' ),
+        stew.mv(bootstrapAssetPath('js/dist'), 'bootstrap')
+      ]),
+      { name: 'vennndor' }
+    );
   },
   included: function(app) {
     while (app.app) {
@@ -35,6 +42,9 @@ module.exports = {
     (plugins || ['collapse', 'dropdown', 'button', 'alert', 'util']).forEach(function(name) {
       app.import('vendor/bootstrap/' + name + '.js');
     });
+    if (!process.env.EMBER_CLI_FASTBOOT) {
+      app.import('vendor/jquery-sparkline/jquery.sparkline.js');
+    }
     this._super.included.apply(this, arguments);
     
   }
