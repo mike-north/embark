@@ -11,7 +11,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/mike-north/embark.git",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -36,7 +36,7 @@
     "ember-cli-htmlbars-inline-precompile": "^0.3.6",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-qunit": "^3.0.1",
-    "ember-cli-release": "^0.2.9",
+    "ember-cli-release": "1.0.0-beta.2",
     "ember-cli-shims": "^1.0.2",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-test-loader": "^1.1.0",
