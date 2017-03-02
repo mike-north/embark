@@ -18,7 +18,10 @@ function bootstrapAssetPath(which) {
 module.exports = {
   name: 'ember-embark',
   treeForStyles: function(tree) {
-    return new Merge([tree, stew.mv(bootstrapAssetPath('scss'), 'bootstrap')]);
+    return new Merge([
+      tree,
+      stew.mv(bootstrapAssetPath('scss'), 'bootstrap')
+    ].filter(Boolean));
   },
   // treeForPublic: function() {
   //   return stew.mv(bootstrapAssetPath('fonts'), 'fonts');
@@ -29,7 +32,7 @@ module.exports = {
         tree,
         stew.mv(path.join(path.dirname(require.resolve('jquery-sparkline'))), 'jquery-sparkline' ),
         stew.mv(bootstrapAssetPath('js/dist'), 'bootstrap')
-      ].map(Boolean)),
+      ].filter(Boolean)),
       { name: 'vennndor' }
     );
   },
