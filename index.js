@@ -29,7 +29,7 @@ module.exports = {
         tree,
         stew.mv(path.join(path.dirname(require.resolve('jquery-sparkline'))), 'jquery-sparkline' ),
         stew.mv(bootstrapAssetPath('js/dist'), 'bootstrap')
-      ]),
+      ].map(Boolean)),
       { name: 'vennndor' }
     );
   },
