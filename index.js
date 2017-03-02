@@ -16,7 +16,7 @@ function bootstrapAssetPath(which) {
 }
 
 module.exports = {
-  name: 'embark',
+  name: 'ember-embark',
   treeForStyles: function(tree) {
     return new Merge([tree, stew.mv(bootstrapAssetPath('scss'), 'bootstrap')]);
   },
