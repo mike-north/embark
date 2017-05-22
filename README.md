@@ -1,5 +1,7 @@
 # embark
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mike-north/embark.svg)](https://greenkeeper.io/)
+
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
